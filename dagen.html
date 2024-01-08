@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400;500;600&family=Abril+Fatface&family=Hind:wght@300;400&family=Onest:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,900;1,200&family=Quicksand:wght@500;600&family=Raleway:wght@100;200;300;400;500;600;700;800&family=Roboto:wght@400;500;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400;500;600&family=Abril+Fatface&family=Archivo:wght@600;700&family=Hind:wght@300;400&family=Libre+Franklin:wght@700&family=Onest:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,900;1,200&family=Quicksand:wght@500;600&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400;500;600&family=Abril+Fatface&family=Archivo:wght@600;700&family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&family=Hind:wght@300;400&family=Libre+Franklin:wght@700&family=Onest:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,900;1,200&family=Quicksand:wght@500;600&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400;500;600&family=Abril+Fatface&family=Archivo:wght@600;700&family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&family=Gabarito:wght@400;500;600;700;800&family=Hind:wght@300;400&family=Libre+Franklin:wght@700&family=Onest:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&family=Quicksand:wght@500;600&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@400;500;600&family=Abril+Fatface&family=Archivo:wght@600;700&family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&family=Gabarito:wght@400;500;600;700;800&family=Hind:wght@300;400&family=Libre+Franklin:wght@700&family=Montserrat:wght@600;800;900&family=Onest:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&family=Quicksand:wght@500;600&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        * {
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            height: 660px;
+            background-color: rgb(255, 255, 255);
+        }
+        .navigation-bar {
+            width: 100%;
+            height: 70px;
+            box-shadow: -1px 4px 13px 0px rgba(189, 188, 188, 0.86);  
+        }
+        .nav-container {
+            display: flex;
+            flex-direction: row;
+            width: 90%;
+            height: 70px;
+            margin: auto;
+            background-color: rgb(255, 255, 255);
+        }
+        .nav-logo {
+            display: flex;
+            flex-direction: row;
+            letter-spacing: 1px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-size: large;
+        }
+        .nav-list {
+            display: flex;
+            width: 440px;
+            height: 70px;
+            padding-top: 25px;
+            padding-bottom: 20px;
+            margin-left: 100px;
+        }
+        ul {
+            list-style: none;
+        }
+        .line {
+            display: inline;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 16px;
+            padding: 8px 22px;
+            font-weight: 500;
+        }
+        .lang {
+            width: 100px;
+            height: 70px;
+            padding-top: 25px;
+            padding-bottom: 20px;
+            margin-left: 100px;
+        }
+        #myDropdown {
+            border: none;
+            outline: none;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .signup-area{
+            display: flex;
+            margin-left: 25px;
+            width: 300px;
+        }
+        button{
+            width: 80px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            border: none;
+            outline: none;
+        }
+        a{
+            font-family: 'DM Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+            color: black;
+            margin-top: 25px;
+            margin-left: 40px;
+        }
+        .up{
+            color: white;
+            background-color: black;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            margin-left: 50px;
+            height: 30px;
+            margin-top: 10px;
+            border-radius: 8px;
+        }
+        .content-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            max-width: 100%;
+            height: 500px;
+        }
+        .left-container{
+            width: 630px;
+            height: 500px;
+        }
+        .right-container{
+            position: relative;
+            width: 630px;
+            height: 500px;
+        }
+        .left-one{
+            width: 560px;
+            height: 200px;
+            margin-top: 50px;
+            margin-left: 70px;
+        }
+        .left-o{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 65px;
+            font-weight: 700;
+            line-height: 70px;
+            letter-spacing: 2px;
+        }
+        .left-two{
+            width: 500px;
+            height: 50px;
+            margin-left: 70px;
+            margin-top: 30px;
+        }
+        .left-t{
+            font-family: 'Montserrat', sans-serif; 
+            font-size: 15px;
+            color: rgb(54, 54, 54);
+            line-height: 20px;
+        }
+        .left-three{
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+            width: 560px;
+            height: 100px;
+            margin-left: 70px;
+            margin-top: 20px;
+        }
+        .get{
+            width: 150px;
+            height: 60px;
+            margin-top: 20px;
+            font-family: 'DM Sans', sans-serif;
+        }
+        .work{
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+            width: 250px;
+            font-weight: 500;
+            height: 60px;
+        }
+        .go{
+            font-family: 'DM Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            color: white;
+            background-color: black;
+            border-radius: 8px;
+            width: 150px;
+            height: 60px;
+        }
+        .how{
+            margin-top: 20px;
+            font-size: 17px;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 500;
+        }
+        .girl{
+            position: absolute;
+            right: 150px;
+        }
+        .footer-container{
+            display: flex;
+            flex-direction: row;
+            max-width: 100%;
+            height: 100px;
+            justify-content: space-around;
+        }
+        .web{   
+            position: relative;
+            width: 170px;
+            height: 100px;
+            margin-top: 10px;
+            padding-top: 10px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navigation-bar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2 style="color: rgb(255, 217, 0); font-family: 'Archivo', sans-serif; font-weight:900">DA</h2>
+                    <h2 style="color: rgb(58, 58, 58); font-family: 'Archivo', sans-serif; font-weight:900">GEN</h2>
+                </div>
+                <div class="nav-list">
+                    <ul>
+                        <li class="line">About us</li>
+                        <li class="line">Profile</li>
+                        <li class="line">Team</li>
+                        <li class="line">Contact</li>
+                    </ul>
+                </div>
+                <div class="lang">
+                    <select name="" id="myDropdown">
+                        <option value="option1">English</option>
+                        <option value="option2">Malayalam</option>
+                        <option value="option3">Hindi</option>
+                    </select>
+                </div>
+                <div class="signup-area">
+                    <a href="">Sign In</a>
+                    <button class="up" style="width: 120px; height: 50px;">Sign Up</button>
+                </div>
+            </div>
+        </div>
+        <div class="content-container">
+            <div class="left-container">
+                <div class="left-one">
+                    <p class="left-o">Infinite</p>
+                    <p class="left-o">Possibilities,</p>
+                    <p class="left-o">One Agency</p>
+                </div>
+                <div class="left-two">
+                    <p class="left-t">Even before the Digital Agency establishment bill was passed,</p>
+                    <p class="left-t">the Cabinet Secretariat's Information Technology</p>
+                </div>
+                <div class="left-three">
+                    <div class="get">
+                        <button class="go">Get Started</button>
+                    </div>
+                    <div class="work">
+                        <img src="./image/Untitled_design-removebg-preview (1).png" alt="">
+                        <p class="how">How Its Works</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-container">
+                <img src="./image/girlpic-removebg-preview.png" alt="" class="girl">
+            </div>
+        </div>
+        <div class="footer-container">
+            <div class="web"><img src="./image/1walmart.png" alt="" class="walmart" ></div>
+            <div class="web"><img src="./image/2fedex.png" alt="" class="fedex"></div>
+            <div class="web"><img src="./image/3kanabanize.png" alt="" class="kanbanize"></div>
+            <div class="web"><img src="./image/4amazon.png" alt="" class="amazon"></div>
+            <div class="web"><img src="./image/5evaly.png" alt="" class="evaly"></div>
+            <div class="web"><img src="./image/6merck'.png" alt="" class="merck"></div>
+        </div>
+    </div>
+</body>
+
+</html>
